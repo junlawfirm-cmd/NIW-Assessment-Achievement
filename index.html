@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NIW Achievement Assessment | Law Office of Hong-min Jun</title>
+  <title>NIW Professional Achievements & National Impact Questionnaire | Law Office of Hong-min Jun</title>
   <style>
     :root {
-      --brand-navy: #163a63;
-      --brand-navy-deep: #0f2a47;
-      --brand-gold: #b9903d;
-      --brand-gold-soft: #ead9b6;
-      --text: #243244;
-      --muted: #66758a;
-      --line: #d8e0ea;
-      --card: rgba(255,255,255,0.9);
-      --shadow: 0 14px 36px rgba(22, 58, 99, 0.10);
+      --navy: #183554;
+      --navy-deep: #10263d;
+      --gold: #b9934a;
+      --gold-soft: #e7dac0;
+      --text: #243243;
+      --muted: #697788;
+      --line: #dde4ea;
+      --card: rgba(255,255,255,0.90);
+      --shadow: 0 12px 28px rgba(19, 43, 69, 0.08);
       --radius-xl: 22px;
       --radius-lg: 16px;
       --radius-md: 12px;
-      --lang-accent: #6f8fb5;
-      --bg-top: #eef4fb;
-      --bg-bottom: #f9fbfe;
-      --header-grad: linear-gradient(135deg, #163a63 0%, #214f83 100%);
+      --accent: #8f9fb0;
+      --bg-top: #f7f9fc;
+      --bg-bottom: #fcfdff;
     }
 
     body.lang-en {
-      --lang-accent: #7f9ab5;
-      --bg-top: #f5f8fc;
+      --accent: #90a4b8;
+      --bg-top: #f7f9fc;
       --bg-bottom: #fcfdff;
     }
 
     body.lang-ko {
-      --lang-accent: #a48e79;
-      --bg-top: #f8f5f1;
+      --accent: #a6927f;
+      --bg-top: #f8f6f3;
       --bg-bottom: #fdfcfb;
     }
 
     body.lang-zh {
-      --lang-accent: #8ea294;
-      --bg-top: #f5f8f5;
+      --accent: #93a595;
+      --bg-top: #f6f8f5;
       --bg-bottom: #fcfefc;
     }
 
@@ -49,14 +48,7 @@
       font-family: "Segoe UI", "Noto Sans KR", "PingFang SC", Arial, sans-serif;
       color: var(--text);
       background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-      transition: background 0.35s ease, color 0.35s ease;
-    }
-
-    .page {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-      position: relative;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .watermark {
@@ -67,23 +59,26 @@
       justify-content: center;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.035;
-      font-size: clamp(38px, 7vw, 92px);
-      font-weight: 800;
-      color: var(--brand-navy);
+      opacity: 0.028;
       transform: rotate(-24deg);
+      font-size: clamp(36px, 7vw, 90px);
+      font-weight: 700;
+      color: var(--navy);
       letter-spacing: 0.08em;
       text-align: center;
       padding: 0 24px;
     }
 
-    .shell {
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
       position: relative;
       z-index: 1;
     }
 
     .branding {
-      background: linear-gradient(135deg, #183859 0%, #214667 52%, #294d70 100%);
+      background: linear-gradient(135deg, #173552 0%, #214564 52%, #294d6c 100%);
       color: #fff;
       border-radius: 24px;
       padding: 18px 22px 18px;
@@ -100,7 +95,7 @@
       right: 22px;
       top: 0;
       height: 3px;
-      background: linear-gradient(90deg, rgba(185,144,61,0.95), rgba(234,217,182,0.7), rgba(185,144,61,0.95));
+      background: linear-gradient(90deg, rgba(185,147,74,0.95), rgba(231,218,192,0.72), rgba(185,147,74,0.95));
       border-radius: 999px;
       z-index: 1;
     }
@@ -108,55 +103,54 @@
     .branding::after {
       content: "";
       position: absolute;
-      right: -100px;
-      top: -80px;
-      width: 260px;
-      height: 260px;
+      right: -90px;
+      top: -90px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.16), rgba(255,255,255,0));
+      background: radial-gradient(circle, rgba(255,255,255,0.12), rgba(255,255,255,0));
     }
 
     .brand-top {
+      position: relative;
+      z-index: 1;
       font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.24em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.72);
       margin-bottom: 8px;
-      position: relative;
-      z-index: 1;
     }
 
     .brand-title {
-      font-size: clamp(24px, 3.6vw, 34px);
-      font-weight: 600;
-      line-height: 1.08;
-      margin: 0;
       position: relative;
       z-index: 1;
+      margin: 0;
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 600;
+      line-height: 1.08;
       letter-spacing: -0.025em;
-      text-wrap: balance;
     }
 
     .brand-subtitle {
+      position: relative;
+      z-index: 1;
       margin: 10px 0 12px;
       font-size: 14px;
       line-height: 1.55;
-      color: rgba(255,255,255,0.88);
-      max-width: 760px;
-      position: relative;
-      z-index: 1;
       font-weight: 500;
+      color: rgba(255,255,255,0.90);
+      max-width: 760px;
     }
 
     .brand-contact {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 8px 10px;
       font-size: 12.5px;
       color: rgba(255,255,255,0.86);
-      position: relative;
-      z-index: 1;
     }
 
     .brand-contact span {
@@ -170,11 +164,11 @@
 
     .toolbar {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      justify-content: flex-start;
       align-items: center;
-      justify-content: space-between;
+      gap: 12px;
       margin: 18px 0 20px;
+      flex-wrap: wrap;
     }
 
     .lang-switcher {
@@ -187,51 +181,24 @@
       appearance: none;
       border: none;
       border-radius: 999px;
-      padding: 11px 16px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-      color: #233246;
-    }
-
-    .lang-btn:hover { transform: translateY(-1px); }
-    .lang-btn:active { transform: translateY(0); }
-
-    .lang-btn[data-lang="en"] { background: #e9f0f7; }
-    .lang-btn[data-lang="ko"] { background: #eee7df; }
-    .lang-btn[data-lang="zh"] { background: #e8efe8; }
-
-    .lang-btn.active {
-      outline: 3px solid rgba(255,255,255,0.72);
-      box-shadow: 0 10px 24px rgba(22, 58, 99, 0.16);
-      color: #13263d;
-    }
-
-    .action-wrap {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .action-btn {
-      appearance: none;
-      border: none;
-      border-radius: 999px;
-      padding: 12px 18px;
+      padding: 10px 16px;
       font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
+      color: #243243;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
     }
 
-    .action-btn:hover { transform: translateY(-1px); }
+    .lang-btn:hover { transform: translateY(-1px); }
 
-    .action-btn.primary {
-      background: var(--brand-navy);
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(22, 58, 99, 0.18);
+    .lang-btn[data-lang="en"] { background: #ebf0f5; }
+    .lang-btn[data-lang="ko"] { background: #eee7de; }
+    .lang-btn[data-lang="zh"] { background: #e8eee8; }
+
+    .lang-btn.active {
+      outline: 3px solid rgba(255,255,255,0.72);
+      box-shadow: 0 10px 22px rgba(22, 58, 99, 0.12);
     }
 
     .panel {
@@ -244,28 +211,29 @@
     }
 
     .headline {
+      margin: 0 0 8px;
       font-size: clamp(22px, 3vw, 28px);
       font-weight: 600;
-      margin: 0 0 8px;
-      color: var(--brand-navy-deep);
+      color: var(--navy-deep);
       letter-spacing: -0.02em;
-    }
-
-    .intro-text,
-    .submit-help,
-    .consent-text {
-      margin: 0;
-      line-height: 1.72;
-      color: var(--text);
-      font-size: 15px;
     }
 
     .intro-box {
       margin-top: 18px;
-      padding: 18px 18px;
+      padding: 18px;
       border-radius: 18px;
-      background: color-mix(in srgb, var(--lang-accent) 10%, white 90%);
-      border: 1px solid color-mix(in srgb, var(--lang-accent) 22%, white 78%);
+      background: color-mix(in srgb, var(--accent) 8%, white 92%);
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, white 82%);
+    }
+
+    .intro-text,
+    .section-note,
+    .consent-text,
+    .submit-help {
+      margin: 0;
+      line-height: 1.72;
+      font-size: 15px;
+      color: var(--text);
     }
 
     .section {
@@ -279,30 +247,31 @@
     .section-title {
       margin: 0 0 8px;
       font-size: 18px;
-      color: var(--brand-navy-deep);
       font-weight: 650;
       letter-spacing: -0.015em;
+      color: var(--navy-deep);
     }
 
     .section-note {
-      margin: 0 0 18px;
-      font-size: 14px;
       color: var(--muted);
-      line-height: 1.65;
+      font-size: 14px;
+      margin-bottom: 16px;
     }
 
     .field {
       margin-bottom: 16px;
     }
 
-    .field:last-child { margin-bottom: 0; }
+    .field:last-child {
+      margin-bottom: 0;
+    }
 
     label {
       display: block;
       font-weight: 600;
       font-size: 13.5px;
       margin-bottom: 8px;
-      color: var(--brand-navy-deep);
+      color: var(--navy-deep);
       line-height: 1.5;
       letter-spacing: -0.01em;
     }
@@ -320,17 +289,17 @@
     input[type="email"],
     textarea {
       width: 100%;
-      border: 1px solid #cdd7e3;
+      border: 1px solid #cfd7df;
       border-radius: 14px;
       padding: 13px 14px;
       font-size: 14px;
       color: var(--text);
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     textarea {
-      min-height: 128px;
+      min-height: 140px;
       resize: vertical;
       line-height: 1.62;
     }
@@ -338,8 +307,8 @@
     input:focus,
     textarea:focus {
       outline: none;
-      border-color: var(--lang-accent);
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--lang-accent) 18%, white 82%);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, white 86%);
       background: #fff;
     }
 
@@ -347,8 +316,8 @@
       margin-top: 20px;
       padding: 20px;
       border-radius: 18px;
-      background: color-mix(in srgb, var(--lang-accent) 8%, white 92%);
-      border: 1px solid color-mix(in srgb, var(--lang-accent) 18%, white 82%);
+      background: color-mix(in srgb, var(--accent) 7%, white 93%);
+      border: 1px solid color-mix(in srgb, var(--accent) 16%, white 84%);
     }
 
     .submit-help {
@@ -356,27 +325,49 @@
       color: var(--muted);
     }
 
+    .action-wrap {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .action-btn.primary {
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(22, 58, 99, 0.18);
+    }
+
     [data-i18n] { display: none; }
-    body.lang-en [data-lang="en"],
-    body.lang-ko [data-lang="ko"],
-    body.lang-zh [data-lang="zh"] {
-      display: block;
-    }
-
-    body.lang-en .inline-lang.en,
-    body.lang-ko .inline-lang.ko,
-    body.lang-zh .inline-lang.zh {
-      display: inline;
-    }
-
     .inline-lang { display: none; }
 
+    body.lang-en [data-lang="en"] { display: block; }
+    body.lang-ko [data-lang="ko"] { display: block; }
+    body.lang-zh [data-lang="zh"] { display: block; }
+
+    body.lang-en .inline-lang.en { display: inline; }
+    body.lang-ko .inline-lang.ko { display: inline; }
+    body.lang-zh .inline-lang.zh { display: inline; }
+
     @media (max-width: 760px) {
-      .branding,
-      .panel,
-      .section { padding: 18px; }
-      .toolbar { align-items: stretch; }
-      .action-wrap { width: 100%; }
+      .branding, .panel, .section, .footer-box { padding: 18px; }
+      .brand-contact { flex-direction: column; }
       .action-btn { width: 100%; }
     }
 
@@ -387,12 +378,13 @@
       }
 
       .watermark {
-        opacity: 0.045;
-        font-size: 64px;
+        opacity: 0.04;
+        font-size: 62px;
       }
 
       .toolbar,
-      .submit-help {
+      .submit-help,
+      .action-wrap {
         display: none !important;
       }
 
@@ -407,14 +399,11 @@
       .footer-box,
       .intro-box {
         box-shadow: none !important;
-        border-color: #d7d7d7 !important;
         background: #fff !important;
+        border-color: #d8d8d8 !important;
       }
 
-      .branding {
-        color: #000 !important;
-      }
-
+      .branding,
       .brand-top,
       .brand-title,
       .brand-subtitle,
@@ -422,13 +411,12 @@
       .brand-contact span {
         color: #000 !important;
         background: transparent !important;
-        border-color: #d7d7d7 !important;
       }
 
       input,
       textarea {
-        border-color: #cfcfcf !important;
         background: #fff !important;
+        border-color: #cfcfcf !important;
       }
     }
   </style>
@@ -437,233 +425,273 @@
   <div class="watermark">LAW OFFICE OF HONG-MIN JUN</div>
 
   <div class="page">
-    <div class="shell">
-      <header class="branding">
-        <div class="brand-top">LAW OFFICE OF HONG-MIN JUN</div>
-        <h1 class="brand-title">NIW Assessment Achievement Intake</h1>
-        <p class="brand-subtitle">
-          Attorneys for Foreign-Born Individuals and Small Business Owners
-        </p>
-        <div class="brand-contact">
-          <span>8170 Allison Pointe Trail, Suite 103, Indianapolis, IN 46250</span>
-          <span>askus@junlawfirm.com</span>
-          <span>847-660-4233 / 317-701-2768</span>
-          <span>www.junlawfirm.com</span>
-        </div>
-      </header>
+    <header class="branding">
+      <div class="brand-top">LAW OFFICE OF HONG-MIN JUN</div>
+      <h1 class="brand-title">NIW Professional Achievements & National Impact Questionnaire</h1>
+      <p class="brand-subtitle">Attorneys for Foreign-Born Individuals and Small Business Owners</p>
+      <div class="brand-contact">
+        <span>10150 Lantern Rd, Suite #175, Fishers, IN 46037</span>
+        <span>317-701-2768</span>
+        <span>askus@junlawfirm.com</span>
+        <span>https://niw-junlawfirm.com</span>
+      </div>
+    </header>
 
-      <div class="toolbar">
-        <div class="lang-switcher" aria-label="Language selector">
-          <button class="lang-btn" data-lang="en" type="button">English</button>
-          <button class="lang-btn active" data-lang="ko" type="button">한국어</button>
-          <button class="lang-btn" data-lang="zh" type="button">中文</button>
-        </div>
+    <div class="toolbar">
+      <div class="lang-switcher" aria-label="Language selector">
+        <button class="lang-btn" data-lang="en" type="button">English</button>
+        <button class="lang-btn active" data-lang="ko" type="button">한국어</button>
+        <button class="lang-btn" data-lang="zh" type="button">中文</button>
+      </div>
+    </div>
+
+    <main class="panel">
+      <h2 class="headline">
+        <span class="inline-lang en">NIW Achievement & National Impact Questionnaire</span>
+        <span class="inline-lang ko">NIW 주요 업적 및 국가적 파급효과 질문서</span>
+        <span class="inline-lang zh">NIW 主要成就与国家层面影响问卷</span>
+      </h2>
+
+      <div class="intro-box">
+        <p class="intro-text" data-i18n data-lang="en">
+          Please answer in as much detail as you comfortably can. You do not need to complete every item perfectly. Your responses will help us better understand your background and evaluate whether your profile may be suitable for an NIW case.
+        </p>
+        <p class="intro-text" data-i18n data-lang="ko">
+          가능한 범위에서 편하게 작성해 주세요. 모든 항목을 완벽하게 채우실 필요는 없습니다. 이 답변은 귀하의 경력과 강점을 보다 정확히 이해하고, NIW 사건으로 검토할 수 있는지 예비적으로 판단하는 데 도움이 됩니다.
+        </p>
+        <p class="intro-text" data-i18n data-lang="zh">
+          请在您方便的范围内尽量具体作答，无需把每一项都填写得非常完整。您的回答将帮助我们更准确地了解您的背景与优势，并对您是否适合作为 NIW 案件进行初步评估。
+        </p>
       </div>
 
-      <main class="panel">
-        <h2 class="headline">
-          <span class="inline-lang en">Achievement & Future Plan Questionnaire</span>
-          <span class="inline-lang ko">주요 업적 및 향후 계획 질문서</span>
-          <span class="inline-lang zh">主要成就与未来计划问卷</span>
-        </h2>
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">1. Basic Information</span>
+          <span class="inline-lang ko">1. 기본 정보</span>
+          <span class="inline-lang zh">1. 基本信息</span>
+        </h3>
+        <p class="section-note" data-i18n data-lang="en">
+          Please provide your basic identifying information.
+        </p>
+        <p class="section-note" data-i18n data-lang="ko">
+          기본적인 인적 사항을 적어 주세요.
+        </p>
+        <p class="section-note" data-i18n data-lang="zh">
+          请填写您的基本信息。
+        </p>
 
-        <div class="intro-box">
-          <p class="intro-text" data-i18n data-lang="en">
-            Please answer in as much detail as you comfortably can. You do not need to complete every item perfectly. Your responses will help us better understand your background and evaluate whether your profile may be suitable for an NIW case.
-          </p>
-          <p class="intro-text" data-i18n data-lang="ko">
-            가능한 범위에서 편하게 작성해 주세요. 모든 항목을 완벽하게 채우실 필요는 없습니다. 이 답변은 귀하의 경력과 강점을 보다 정확히 이해하고, NIW 사건으로 검토할 수 있는지 예비적으로 판단하는 데 도움이 됩니다.
-          </p>
-          <p class="intro-text" data-i18n data-lang="zh">
-            请在您方便的范围内尽量具体作答，无需把每一项都填写得非常完整。您的回答将帮助我们更准确地了解您的背景与优势，并对您是否适合作为 NIW 案件进行初步评估。
-          </p>
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Full Name</span>
+            <span class="inline-lang ko">성명</span>
+            <span class="inline-lang zh">姓名</span>
+          </label>
+          <input type="text" />
         </div>
 
-        <section class="section">
-          <h3 class="section-title">
-            <span class="inline-lang en">1. Basic Information</span>
-            <span class="inline-lang ko">1. 기본 정보</span>
-            <span class="inline-lang zh">1. 基本信息</span>
-          </h3>
-          <p class="section-note" data-i18n data-lang="en">Please provide basic identifying information so we can connect this questionnaire to your preliminary review.</p>
-          <p class="section-note" data-i18n data-lang="ko">예비 검토와 연결할 수 있도록 기본 정보를 적어 주세요.</p>
-          <p class="section-note" data-i18n data-lang="zh">请填写基本信息，以便我们将本问卷与您的初步评估对应起来。</p>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">Full Name</span>
-              <span class="inline-lang ko">성명</span>
-              <span class="inline-lang zh">姓名</span>
-            </label>
-            <input type="text" />
-          </div>
-          <div class="field">
-            <label>
-              <span class="inline-lang en">Email Address</span>
-              <span class="inline-lang ko">이메일 주소</span>
-              <span class="inline-lang zh">电子邮箱</span>
-            </label>
-            <input type="email" />
-          </div>
-          <div class="field">
-            <label>
-              <span class="inline-lang en">Current Field / Profession</span>
-              <span class="inline-lang ko">현재 전문 분야 / 직업</span>
-              <span class="inline-lang zh">当前专业领域 / 职业</span>
-            </label>
-            <input type="text" />
-          </div>
-        </section>
-
-        <section class="section">
-          <h3 class="section-title">
-            <span class="inline-lang en">2. Representative Achievement</span>
-            <span class="inline-lang ko">2. 대표 업적</span>
-            <span class="inline-lang zh">2. 代表性成就</span>
-          </h3>
-          <p class="section-note" data-i18n data-lang="en">Choose one or two of your strongest achievements and describe them clearly.</p>
-          <p class="section-note" data-i18n data-lang="ko">가장 중요한 업적 1~2개를 중심으로 구체적으로 설명해 주세요.</p>
-          <p class="section-note" data-i18n data-lang="zh">请围绕您最重要的一到两项成就进行具体说明。</p>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">What was your most important professional achievement?</span>
-              <span class="inline-lang ko">가장 중요한 전문적 업적은 무엇입니까?</span>
-              <span class="inline-lang zh">您最重要的专业成就是什么？</span>
-              <span class="hint inline-lang en">Please describe the project, your role, and the result.</span>
-              <span class="hint inline-lang ko">프로젝트의 내용, 본인의 역할, 결과를 함께 적어 주세요.</span>
-              <span class="hint inline-lang zh">请说明项目内容、您的角色以及最终结果。</span>
-            </label>
-            <textarea></textarea>
-          </div>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">What difficult problem did you solve, and how did you solve it?</span>
-              <span class="inline-lang ko">어떤 어려운 문제를 해결했고, 어떻게 해결했습니까?</span>
-              <span class="inline-lang zh">您解决了什么困难问题？又是如何解决的？</span>
-            </label>
-            <textarea></textarea>
-          </div>
-        </section>
-
-        <section class="section">
-          <h3 class="section-title">
-            <span class="inline-lang en">3. Evidence of Impact</span>
-            <span class="inline-lang ko">3. 영향력 및 입증 자료</span>
-            <span class="inline-lang zh">3. 影响力与证明材料</span>
-          </h3>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">How did your work affect patients, clients, institutions, industry, or society?</span>
-              <span class="inline-lang ko">귀하의 업무가 환자, 고객, 기관, 업계 또는 사회에 어떤 영향을 주었습니까?</span>
-              <span class="inline-lang zh">您的工作对患者、客户、机构、行业或社会产生了什么影响？</span>
-            </label>
-            <textarea></textarea>
-          </div>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">What documents or evidence can support those achievements?</span>
-              <span class="inline-lang ko">그 업적을 뒷받침할 수 있는 자료나 증빙은 무엇입니까?</span>
-              <span class="inline-lang zh">有哪些文件或证据可以支持这些成就？</span>
-            </label>
-            <textarea></textarea>
-          </div>
-        </section>
-
-        <section class="section">
-          <h3 class="section-title">
-            <span class="inline-lang en">4. Future U.S. Plan</span>
-            <span class="inline-lang ko">4. 미국에서의 향후 계획</span>
-            <span class="inline-lang zh">4. 在美国的未来计划</span>
-          </h3>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">What kind of work do you plan to pursue in the United States over the next 3 to 5 years?</span>
-              <span class="inline-lang ko">향후 3~5년 동안 미국에서 어떤 일을 하실 계획입니까?</span>
-              <span class="inline-lang zh">未来 3 到 5 年，您计划在美国从事什么工作？</span>
-            </label>
-            <textarea></textarea>
-          </div>
-
-          <div class="field">
-            <label>
-              <span class="inline-lang en">Why would that work matter beyond your own personal career?</span>
-              <span class="inline-lang ko">그 일이 본인의 개인 경력을 넘어 왜 더 넓은 중요성을 가지는지 설명해 주세요.</span>
-              <span class="inline-lang zh">请说明这项工作为什么不仅对您个人职业发展重要，而且具有更广泛意义。</span>
-            </label>
-            <textarea></textarea>
-          </div>
-        </section>
-
-        <section class="section">
-          <h3 class="section-title">
-            <span class="inline-lang en">5. Additional Notes</span>
-            <span class="inline-lang ko">5. 추가 설명</span>
-            <span class="inline-lang zh">5. 补充说明</span>
-          </h3>
-          <div class="field">
-            <label>
-              <span class="inline-lang en">Anything else you would like us to know at this stage?</span>
-              <span class="inline-lang ko">현 단계에서 추가로 알려주고 싶은 사항이 있다면 적어 주세요.</span>
-              <span class="inline-lang zh">现阶段如有其他希望我们了解的事项，请在此填写。</span>
-            </label>
-            <textarea></textarea>
-          </div>
-        </section>
-
-        <div class="footer-box">
-          <p class="consent-text" data-i18n data-lang="en">
-            By saving this form as a PDF, you consent to the Law Office of Hong-min Jun reviewing this information solely for the purpose of evaluating your potential NIW case and related immigration options.
-          </p>
-          <p class="consent-text" data-i18n data-lang="ko">
-            이 양식을 PDF로 저장하여 전달하시는 경우, 귀하는 본 정보가 NIW 및 관련 이민 옵션 검토를 위해 전홍민 변호사 사무소에서 검토·활용되는 것에 동의하는 것으로 간주됩니다.
-          </p>
-          <p class="consent-text" data-i18n data-lang="zh">
-            当您将本表格保存为 PDF 并发送时，即表示您同意洪珉俊律师事务所出于评估您 NIW 及相关移民方案之目的，对上述信息进行审阅和使用。
-          </p>
-
-          <p class="submit-help" data-i18n data-lang="en">
-            If you are ready, click below to open the print dialog and save your completed answers as a PDF. You may then email the PDF to askus@junlawfirm.com.
-          </p>
-          <p class="submit-help" data-i18n data-lang="ko">
-            작성이 끝나셨다면 아래 버튼을 눌러 인쇄 창을 여신 뒤, 답변서를 PDF로 저장해 주세요. 저장한 PDF는 askus@junlawfirm.com으로 보내 주시면 됩니다.
-          </p>
-          <p class="submit-help" data-i18n data-lang="zh">
-            如您已填写完成，请点击下方按钮打开打印窗口，并将答卷保存为 PDF。保存后，请将 PDF 发送至 askus@junlawfirm.com。
-          </p>
-
-          <div class="action-wrap" style="margin-top:16px; justify-content:flex-start;">
-            <button id="printBtn" class="action-btn primary" type="button">
-              <span class="inline-lang en">Save as PDF</span>
-              <span class="inline-lang ko">PDF로 저장하기</span>
-              <span class="inline-lang zh">保存为 PDF</span>
-            </button>
-          </div>
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Email Address</span>
+            <span class="inline-lang ko">이메일 주소</span>
+            <span class="inline-lang zh">电子邮箱</span>
+          </label>
+          <input type="email" />
         </div>
-      </main>
-    </div>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Current Field / Profession</span>
+            <span class="inline-lang ko">현재 전문 분야 / 직업</span>
+            <span class="inline-lang zh">当前专业领域 / 职业</span>
+          </label>
+          <input type="text" />
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">2. Most Significant Professional Achievement</span>
+          <span class="inline-lang ko">2. 가장 중요한 전문적 업적</span>
+          <span class="inline-lang zh">2. 最重要的专业成就</span>
+        </h3>
+        <p class="section-note" data-i18n data-lang="en">
+          Please describe the single most important achievement in your professional career.
+        </p>
+        <p class="section-note" data-i18n data-lang="ko">
+          귀하의 경력에서 가장 중요한 업적을 구체적으로 설명해 주세요.
+        </p>
+        <p class="section-note" data-i18n data-lang="zh">
+          请具体说明您职业生涯中最重要的一项成就。
+        </p>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Describe your most significant achievement.</span>
+            <span class="inline-lang ko">가장 중요한 업적을 설명해 주세요.</span>
+            <span class="inline-lang zh">请说明您最重要的成就。</span>
+            <span class="hint inline-lang en">Include the project, your role, and the result.</span>
+            <span class="hint inline-lang ko">프로젝트의 내용, 본인의 역할, 결과를 함께 적어 주세요.</span>
+            <span class="hint inline-lang zh">请说明项目内容、您的角色以及结果。</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">3. Most Challenging Project or Problem</span>
+          <span class="inline-lang ko">3. 가장 어려웠던 프로젝트 또는 문제</span>
+          <span class="inline-lang zh">3. 最具挑战性的项目或问题</span>
+        </h3>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">What was the most difficult project or problem you faced?</span>
+            <span class="inline-lang ko">가장 어렵게 느꼈던 프로젝트 또는 문제는 무엇이었습니까?</span>
+            <span class="inline-lang zh">您遇到过的最困难的项目或问题是什么？</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">4. How You Solved the Problem</span>
+          <span class="inline-lang ko">4. 그 문제를 해결한 방법</span>
+          <span class="inline-lang zh">4. 您如何解决该问题</span>
+        </h3>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">How did you solve that problem?</span>
+            <span class="inline-lang ko">그 문제를 어떻게 해결하였습니까?</span>
+            <span class="inline-lang zh">您是如何解决该问题的？</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">5. Impact on Organization, Industry, or Society</span>
+          <span class="inline-lang ko">5. 조직, 업계 또는 사회에 미친 영향</span>
+          <span class="inline-lang zh">5. 对机构、行业或社会的影响</span>
+        </h3>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">How did your work affect your organization, industry, or society?</span>
+            <span class="inline-lang ko">귀하의 업무가 소속 기관, 업계 또는 사회에 어떤 영향을 주었습니까?</span>
+            <span class="inline-lang zh">您的工作对所在机构、行业或社会产生了什么影响？</span>
+          </label>
+          <textarea></textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">What documents or evidence can support this impact?</span>
+            <span class="inline-lang ko">이러한 영향을 뒷받침할 수 있는 자료나 증빙은 무엇입니까?</span>
+            <span class="inline-lang zh">有哪些文件或证据可以支持这种影响？</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">6. Connection to the United States & Future Plan (Proposed Endeavor)</span>
+          <span class="inline-lang ko">6. 미국과의 연결성 및 향후 계획 (Proposed Endeavor)</span>
+          <span class="inline-lang zh">6. 与美国的联系及未来计划（Proposed Endeavor）</span>
+        </h3>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">What kind of work do you plan to pursue in the United States over the next 3 to 5 years?</span>
+            <span class="inline-lang ko">향후 3~5년 동안 미국에서 어떤 일을 하실 계획입니까?</span>
+            <span class="inline-lang zh">未来 3 到 5 年，您计划在美国从事什么工作？</span>
+          </label>
+          <textarea></textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Why would that work matter beyond your own personal career?</span>
+            <span class="inline-lang ko">그 일이 본인의 경력을 넘어 왜 더 넓은 중요성을 가지는지 설명해 주세요.</span>
+            <span class="inline-lang zh">请说明这项工作为何不仅对您个人职业发展重要，而且具有更广泛意义。</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="inline-lang en">7. Additional Information</span>
+          <span class="inline-lang ko">7. 추가 정보</span>
+          <span class="inline-lang zh">7. 其他补充信息</span>
+        </h3>
+
+        <div class="field">
+          <label>
+            <span class="inline-lang en">Anything else you would like us to know at this stage?</span>
+            <span class="inline-lang ko">현 단계에서 추가로 알려주고 싶은 사항이 있다면 적어 주세요.</span>
+            <span class="inline-lang zh">现阶段如有其他希望我们了解的内容，请填写在这里。</span>
+          </label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      <div class="footer-box">
+        <p class="consent-text" data-i18n data-lang="en">
+          By saving this form as a PDF, you consent to the Law Office of Hong-min Jun reviewing this information solely for the purpose of evaluating your potential NIW case and related immigration options.
+        </p>
+        <p class="consent-text" data-i18n data-lang="ko">
+          이 양식을 PDF로 저장하여 전달하시는 경우, 귀하는 본 정보가 NIW 및 관련 이민 옵션 검토를 위해 전홍민 변호사 사무소에서 검토·활용되는 것에 동의하는 것으로 간주됩니다.
+        </p>
+        <p class="consent-text" data-i18n data-lang="zh">
+          当您将本表格保存为 PDF 并发送时，即表示您同意洪珉俊律师事务所出于评估您 NIW 及相关移民方案之目的，对上述信息进行审阅和使用。
+        </p>
+
+        <p class="submit-help" data-i18n data-lang="en">
+          If you are ready, click below to open the print dialog and save your completed answers as a PDF. You may then email the PDF to askus@junlawfirm.com.
+        </p>
+        <p class="submit-help" data-i18n data-lang="ko">
+          작성이 끝나셨다면 아래 버튼을 눌러 인쇄 창을 여신 뒤, 답변서를 PDF로 저장해 주세요. 저장한 PDF는 askus@junlawfirm.com으로 보내 주시면 됩니다.
+        </p>
+        <p class="submit-help" data-i18n data-lang="zh">
+          如您已填写完成，请点击下方按钮打开打印窗口，并将答卷保存为 PDF。保存后，请将 PDF 发送至 askus@junlawfirm.com。
+        </p>
+
+        <div class="action-wrap">
+          <button id="printBtn" class="action-btn primary" type="button">
+            <span class="inline-lang en">Save as PDF</span>
+            <span class="inline-lang ko">PDF로 저장하기</span>
+            <span class="inline-lang zh">保存为 PDF</span>
+          </button>
+        </div>
+      </div>
+    </main>
   </div>
 
   <script>
     const body = document.body;
-    const buttons = document.querySelectorAll('.lang-btn');
+    const langButtons = document.querySelectorAll(".lang-btn");
 
     function setLanguage(lang) {
-      body.classList.remove('lang-en', 'lang-ko', 'lang-zh');
+      body.classList.remove("lang-en", "lang-ko", "lang-zh");
       body.classList.add(`lang-${lang}`);
-      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-      document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'zh' ? 'zh' : 'en';
+
+      langButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+
+      document.documentElement.lang = lang === "ko" ? "ko" : lang === "zh" ? "zh" : "en";
     }
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
     });
 
-    document.getElementById('printBtn').addEventListener('click', () => {
+    document.getElementById("printBtn").addEventListener("click", () => {
       window.print();
     });
   </script>
